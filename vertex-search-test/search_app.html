@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex AI Search Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        #searchWidgetTrigger {
+            padding: 10px 15px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 24px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        #searchWidgetTrigger:focus {
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+            border-color: transparent;
+        }
+    </style>
+    <!-- Widget JavaScript bundle -->
+    <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Vertex AI Search Demo</h1>
+    
+    <!-- Element that opens the widget on click. It does not have to be an input -->
+    <input placeholder="Search Google Cloud Docs..." id="searchWidgetTrigger" />
+
+    <!-- Search widget element is not visible by default -->
+    <gen-search-widget
+      configId="18e690b5-aeea-4eb4-af06-757ac6857145"
+      triggerId="searchWidgetTrigger">
+    </gen-search-widget>
+</div>
+
+</body>
+</html>
